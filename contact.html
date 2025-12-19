@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  /* Contact Section */
+  #contact-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+
+  #contact-details .details {
+    flex: 1;
+  }
+
+  #contact-details span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e7d32;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  #contact-details h2 {
+    margin: 10px 0 20px;
+    font-size: 28px;
+    color: #333;
+  }
+
+  #contact-details h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #2e7d32;
+  }
+
+  #contact-details ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #contact-details ul li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  #contact-details ul li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #contact-details ul li strong {
+    color: #444;
+  }
+
+  /* Contact Form Professional Look */
+  #form-details form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  #form-details span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e7d32;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  #form-details h2 {
+    margin: 10px 0 20px;
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+  }
+
+  #form-details input,
+  #form-details textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  #form-details input:focus,
+  #form-details textarea:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 6px rgba(46, 125, 50, 0.2);
+    outline: #333;
+  }
+
+  #form-details button.normal {
+    background: #2e7d32;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  #form-details button.normal:hover {
+    background: #1b5e20;
+    transform: translateY(-2px);
+  }
+
+  /* People Section - 1 Column */
+  .people {
+    display: block;
+    /* ensures vertical stacking */
+    margin-top: 30px;
+  }
+
+  .people div {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* spacing between cards */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .people div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .people img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    object-fit: cover;
+    background: #e0e0e0;
+    /* placeholder background */
+  }
+
+  .people p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  .people p span {
+    display: block;
+    font-weight: 600;
+    color: #2e7d32;
+    margin-bottom: 6px;
+  }
+
+  .people img {
+    width: 90px;
+    /* slightly larger than before */
+    height: 90px;
+    /* keep square for perfect circle */
+    border-radius: 50%;
+    /* makes the photo circular */
+    margin-bottom: 12px;
+    /* space between photo and text */
+    object-fit: cover;
+    /* ensures the image fills nicely */
+    border: 2px solid #2e7d32;
+    /* subtle green border for professional look */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* soft shadow */
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shopping</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <section id="header">
+    <a href="#" img src="logo.png" alt=" "></a>
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="shop.html"> Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a class="active" href="contact.html"> Contact</a></li>
+        <li id="lg-bag"><a href="cart.html"> <i class="fa-solid fa-bag-shopping"></i></a></li>
+        <a href="#" id="close"><i class="far fa-times"></i></a>
+      </ul>
+    </div>
+    <div id="mobile">
+      <a href="cart.html"> <i class="fa-solid fa-bag-shopping"></i></a>
+      <i id="bar" class="fas fa-outdent"></i>
+    </div>
+  </section>
+
+  <section id="contact-details" class="section-p1">
+    <div class="details">
+      <span>GET IN TOUCH</span>
+      <h2>Visit our Locations or contact us today</h2>
+      <h3>🏢 Head Office</h3>
+      <div>
+        <ul>
+          <li><strong>🗺️ Bilad, Camiling, Tarlac</strong></li>
+          <li><strong>📧 luntianagrishop@gmail.com</strong></li>
+          <li><strong>📞 09709367034</strong></li>
+          <li><strong>🗺️ Bilad, Camiling, Tarlac</strong></li>
+          <li><strong>🕓 Monday to Sunday: 8:00am to 5:00pm</strong></li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30721.955581637438!2d120.41943351441488!3d15.738202540254886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33914c73b89be743%3A0x9d72aa6b30e8b4bb!2sBilad%2C%20Camiling%2C%20Tarlac!5e0!3m2!1sen!2sph!4v1765030222366!5m2!1sen!2sph"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section id="form-details">
+    <form action="">
+      <span>LEAVE A MESSAGE</span>
+      <h2>We love to hear from you</h2>
+      <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="E-mail">
+      <input type="text" placeholder="Subject">
+      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <button class="normal">Submit</button>
+
+    </form>
+    <div class="people">
+      <div>
+        <img src="log.png" alt="">
+        <p><span>Luntian Agri Shop</span> <br> Phone: 09943877531<br>
+          Email:luntianagrishop@gmail.com</p>
+      </div>
+      <div>
+       
+
+  </section>
+
+  <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+      <h4>Sign Up for E-mail</h4>
+      <p>
+        Get E-mail updates about our latest shop and <span>special offers</span>.
+      </p>
+    </div>
+    <div class="form">
+      <input type="text" placeholder="Your email address">
+      <button class="normal">Sign Up</button>
+    </div>
+  </section>
+
+  <footer class="section-p1">
+    <div class="col">
+      <h4>Contact</h4>
+      <p><strong>Address: </strong> Bilad, Camiling, Tarlac</p>
+      <p><strong>Phone: </strong> 09709367034</p>
+      <p><strong>Hours: </strong> 8:00Am - 5:00Pm, Mon - Sat</p>
+      <div class="follow">
+        <h4> Follow us</h4>
+        <div class="icon">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact us</a>
+    </div>
+    <div class="col">
+      <h4>My Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
+
+    <div class="col install">
+      <h4>Install App</h4>
+      <p> From App Store or Google App Store</p>
+      <div class="row">
+        <img src="app.jpg" alt="">
+        <img src="play.jpg">
+      </div>
+      <p>Secured Payment Gateways</p>
+      <img src="pay.png" alt="">
+    </div>
+    <div class="copyright">
+      <p>2025, Shop etc - All Right Reserved </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
